@@ -452,13 +452,21 @@
         let editingPinId = null;
 
         // データ読み込み
-        function loadPins() {
-            const data = localStorage.getItem(STORAGE_KEY);
-            pins = data ? JSON.parse(data) : [];
-            renderPins();
+        async function loadPins() {
+            try {
+                const response = await fetch(
+                     'https://drive.google.com/uc?export=download&id=1RIH8lbk1SMfDWmIYbvg5vrm_twuQUsRS'
+                 );
+                 const data = await response.json();
+                pins = data;
+            } catch (e) {
+                console.error('JSON読み込み失敗', e);
+                 pins = [];
+            }
+
+             renderPins();
             updateStats();
         }
-
         // データ保存
         function savePins() {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(pins));
