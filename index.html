@@ -454,17 +454,23 @@
         // データ読み込み
         async function loadPins() {
             try {
-                const response = await fetch(
-                     'sodor_map_data.json'
-                 );
-                 const data = await response.json();
-                pins = data;
+                // まず外部JSONを試行
+                const response = await fetch('sodor_map_data.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    pins = data;
+                    savePins(); // localStorageにも同期
+                } else {
+                    // 外部JSONがない場合はlocalStorageから
+                    const stored = localStorage.getItem(STORAGE_KEY);
+                    pins = stored ? JSON.parse(stored) : [];
+                }
             } catch (e) {
-                console.error('JSON読み込み失敗', e);
-                 pins = [];
+                console.error('データ読み込み失敗', e);
+                const stored = localStorage.getItem(STORAGE_KEY);
+                pins = stored ? JSON.parse(stored) : [];
             }
-
-             renderPins();
+            renderPins();
             updateStats();
         }
         // データ保存
