@@ -442,9 +442,8 @@
      // ===================
     // データ管理
     // ===================
-    const STORAGE_KEY = 'sodor_map_pins';
-    const PASSWORD_KEY = 'sodor_map_password';
-    const FIXED_PASSWORD = '20130227'; // ②固定パスワード
+    const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/Kyue-Silver/sodor/main/sodor_map_data.json';
+    const FIXED_PASSWORD = '20130227';
 
     let pins = [];
     let isAdminMode = false;
@@ -452,50 +451,65 @@
     let selectedColor = '#e94560';
     let editingPinId = null;
 
-    // JSON優先読み込み（localStorage完全無視）
+   // ① GitHubから読み込み
     async function loadPins() {
         try {
-            const response = await fetch('sodor_map_data.json');
+            const response = await fetch(GITHUB_RAW_URL);
             if (response.ok) {
                 pins = await response.json();
-                console.log(`JSONから${pins.length}個のピンを読み込み`);
+                console.log(`GitHubから${pins.length}個読み込み✓`);
             } else {
-                console.log('sodor_map_data.jsonが見つかりません');
+                console.log('GitHub JSON読み込み失敗');
                 pins = [];
             }
         } catch (e) {
-            console.error('JSON読み込み失敗:', e);
+            console.error('GitHub読み込みエラー:', e);
             pins = [];
         }
         renderPins();
         updateStats();
     }
 
-    // JSONファイル書き換え保存
-    async function savePinsToJson() {
+    // ③ GitHubに書き込み（ログアウト時）
+    async function savePinsToGitHub() {
+        if (!isAdminMode) return;
+        
         try {
-            const response = await fetch('sodor_map_data.json', {
+            // GitHub APIでPUT（Personal Access Token必要）
+            const token = prompt('GitHub書き込み用Tokenを入力（キャンセルでlocalStorage保存）');
+            if (!token) {
+                localStorage.setItem('sodor_pins_backup', JSON.stringify(pins));
+                console.log('Tokenなし→localStorageバックアップ');
+                return;
+            }
+
+            const response = await fetch('https://api.github.com/repos/Kyue-Silver/sodor/contents/sodor_map_data.json', {
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(pins, null, 2)
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `Update sodor_map_data.json (${new Date().toISOString()})`,
+                    content: btoa(unescape(encodeURIComponent(JSON.stringify(pins, null, 2))))
+                })
             });
+
             if (response.ok) {
-                console.log('JSONファイルに保存完了');
+                console.log('✅ GitHub保存完了！');
+                alert('GitHubに保存完了！');
             } else {
-                // サーバー非対応時はlocalStorageフォールバック
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(pins));
-                console.log('JSON書き込み不可→localStorageに保存');
+                throw new Error(await response.text());
             }
         } catch (e) {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(pins));
-            console.log('JSON書き込み失敗→localStorageに保存');
+            console.error('GitHub保存失敗:', e);
+            localStorage.setItem('sodor_pins_backup', JSON.stringify(pins));
+            alert('GitHub保存失敗→localStorageにバックアップ');
         }
-        updateStats();
     }
 
-    // 統計更新
     function updateStats() {
-        document.getElementById('stats').textContent = `登録ピン数: ${pins.length}`;
+        document.getElementById('stats').textContent = `ピン数: ${pins.length} (GitHub: ${GITHUB_RAW_URL})`;
     }
 
         // ===================
