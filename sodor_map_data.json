@@ -1,114 +1,1560 @@
-[
-  {
-    "id": "1776412122923",
-    "x": 23.919753086419753,
-    "y": 32.9059286530405,
-    "title": "マースウェイト",
-    "url": "https://kyutaro8.blog.jp/archives/29544672.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412167488",
-    "x": 23.456790123456788,
-    "y": 45.09330963564809,
-    "title": "ファーカー",
-    "url": "https://kyutaro8.blog.jp/archives/29438293.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412272740",
-    "x": 35.95679012345679,
-    "y": 59.7181668147772,
-    "title": "マロン",
-    "url": "https://kyutaro8.blog.jp/archives/29362451.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412314793",
-    "x": 61.419753086419746,
-    "y": 80.84296051796369,
-    "title": "ロルフズ・キャッスル",
-    "url": "https://kyutaro8.blog.jp/archives/28065711.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412333057",
-    "x": 91.66666666666666,
-    "y": 60.53065888028437,
-    "title": "ノランビー",
-    "url": "https://kyutaro8.blog.jp/archives/27948199.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412350062",
-    "x": 42.592592592592595,
-    "y": 61.14002792941476,
-    "title": "クロンク",
-    "url": "https://kyutaro8.blog.jp/archives/27883677.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412370590",
-    "x": 29.629629629629626,
-    "y": 10.562396851593245,
-    "title": "ハーウィック",
-    "url": "https://kyutaro8.blog.jp/archives/27805847.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412411825",
-    "x": 43.05555555555556,
-    "y": 36.765265964199564,
-    "title": "カーク・マッシャン",
-    "url": "https://kyutaro8.blog.jp/archives/27805884.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412438377",
-    "x": 12.808641975308642,
-    "y": 52.81198425796623,
-    "title": "エルスブリッジ",
-    "url": "https://kyutaro8.blog.jp/archives/27670130.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412467756",
-    "x": 78.5493827160494,
-    "y": 65.811857306081,
-    "title": "クロバンズゲート",
-    "url": "https://kyutaro8.blog.jp/archives/27663099.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412494364",
-    "x": 73.30246913580247,
-    "y": 47.32766281579281,
-    "title": "グレート・ウォータートン",
-    "url": "https://kyutaro8.blog.jp/archives/27522650.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412516164",
-    "x": 56.018518518518526,
-    "y": 89.37412720578901,
-    "title": "カーク・ロナン",
-    "url": "https://kyutaro8.blog.jp/archives/4002515.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412537376",
-    "x": 23.61111111111111,
-    "y": 61.34315094579155,
-    "title": "ウェルスワース",
-    "url": "https://kyutaro8.blog.jp/archives/3991027.html",
-    "color": "#f39c12"
-  },
-  {
-    "id": "1776412565368",
-    "x": 13.88888888888889,
-    "y": 35.9527738986924,
-    "title": "アールズバーグ",
-    "url": "https://kyutaro8.blog.jp/archives/3953091.html",
-    "color": "#f39c12"
-  },
-]
+pasted_content.txt
+テキスト · 25.7 KB
+pasted-text.txt
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ソドー島マップ - 記事データベース</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #e94560;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff6b6b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #533483;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #7952a3;
+        }
+
+        /* マップコンテナ */
+        .map-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .map-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .map-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        /* ピンマーカー */
+        .pin {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -100%);
+            cursor: pointer;
+            transition: transform 0.2s;
+            z-index: 10;
+        }
+
+        .pin:hover {
+            transform: translate(-50%, -100%) scale(1.3);
+        }
+
+        .pin svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+        }
+
+        .pin-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            margin-bottom: 5px;
+        }
+
+        .pin:hover .pin-tooltip {
+            opacity: 1;
+        }
+
+        /* 管理モード時のスタイル */
+        .map-wrapper.admin-mode {
+            cursor: crosshair;
+        }
+
+        .map-wrapper.admin-mode img {
+            border: 3px solid #e94560;
+        }
+
+        /* モーダル */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: #16213e;
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .modal h2 {
+            margin-bottom: 20px;
+            color: #e94560;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #aaa;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #0f3460;
+            border-radius: 8px;
+            background: #1a1a2e;
+            color: white;
+            font-size: 14px;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #e94560;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 25px;
+        }
+
+        /* 管理パネル */
+        .admin-panel {
+            display: none;
+            background: #16213e;
+            padding: 15px 30px;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .admin-panel p {
+            color: #e94560;
+            font-weight: bold;
+        }
+
+        .admin-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* ピンリスト */
+        .pin-list {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .pin-list h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+
+        .pin-list-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .pin-item {
+            background: #16213e;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pin-item-info {
+            flex: 1;
+        }
+
+        .pin-item-title {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .pin-item-url {
+            font-size: 12px;
+            color: #888;
+            word-break: break-all;
+        }
+
+        .pin-item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .btn-danger {
+            background: #c0392b;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #e74c3c;
+        }
+
+        /* 統計 */
+        .stats {
+            background: #0f3460;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        /* カラー選択 */
+        .color-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: transform 0.2s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.2);
+        }
+
+        .color-option.selected {
+            border-color: white;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.2rem;
+            }
+            
+            .admin-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🚂 ソドー島マップ - 記事データベース</h1>
+        <div class="header-buttons">
+            <button class="btn btn-secondary" id="exportBtn">エクスポート</button>
+            <button class="btn btn-secondary" id="importBtn">インポート</button>
+            <button class="btn btn-primary" id="adminBtn">🔐 管理者ログイン</button>
+        </div>
+    </header>
+
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-info">
+            <p>📍 管理モード: 地図をクリックしてピンを追加</p>
+            <div>
+                <button class="btn btn-secondary btn-small" id="toggleListBtn">ピン一覧表示</button>
+                <button class="btn btn-danger btn-small" id="logoutBtn">ログアウト</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div class="stats" id="stats">登録ピン数: 0</div>
+        <div class="map-wrapper" id="mapWrapper">
+            <!-- ここに地図画像を設定 -->
+            <img src="https://lh3.googleusercontent.com/d/1ZuFen9JHiu5dyNMLaWfQ8B1sHDrX2_f9" alt="ソドー島マップ" id="mapImage">
+            <div id="pinsContainer"></div>
+        </div>
+    </div>
+
+    <div class="pin-list" id="pinList" style="display: none;">
+        <h3>📌 登録済みピン一覧</h3>
+        <div class="pin-list-items" id="pinListItems"></div>
+    </div>
+
+    <!-- ログインモーダル -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <h2>🔐 管理者ログイン</h2>
+            <div class="form-group">
+                <label>パスワード</label>
+                <input type="password" id="passwordInput" placeholder="パスワードを入力">
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="cancelLogin">キャンセル</button>
+                <button class="btn btn-primary" id="submitLogin">ログイン</button>
+            </div>
+            <p style="margin-top: 15px; font-size: 12px; color: #888;">
+                ※初回は任意のパスワードで登録されます
+            </p>
+        </div>
+    </div>
+
+    <!-- ピン追加モーダル -->
+    <div class="modal-overlay" id="pinModal">
+        <div class="modal">
+            <h2>📍 ピンを追加</h2>
+            <div class="form-group">
+                <label>タイトル（場所名）</label>
+                <input type="text" id="pinTitle" placeholder="例: ティドマス機関庫">
+            </div>
+            <div class="form-group">
+                <label>リンクURL</label>
+                <input type="url" id="pinUrl" placeholder="[kyutaro8.blog.jp](https://kyutaro8.blog.jp/archives/xxx)">
+            </div>
+            <div class="form-group">
+                <label>ピンの色</label>
+                <div class="color-options" id="colorOptions">
+                    <div class="color-option selected" data-color="#e94560" style="background: #e94560;"></div>
+                    <div class="color-option" data-color="#3498db" style="background: #3498db;"></div>
+                    <div class="color-option" data-color="#2ecc71" style="background: #2ecc71;"></div>
+                    <div class="color-option" data-color="#f39c12" style="background: #f39c12;"></div>
+                    <div class="color-option" data-color="#9b59b6" style="background: #9b59b6;"></div>
+                    <div class="color-option" data-color="#1abc9c" style="background: #1abc9c;"></div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="cancelPin">キャンセル</button>
+                <button class="btn btn-primary" id="savePin">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- インポートモーダル -->
+    <div class="modal-overlay" id="importModal">
+        <div class="modal">
+            <h2>📥 データインポート</h2>
+            <div class="form-group">
+                <label>JSONデータを貼り付け</label>
+                <textarea id="importData" style="width: 100%; height: 150px; padding: 12px; border: 2px solid #0f3460; border-radius: 8px; background: #1a1a2e; color: white; font-size: 14px; resize: vertical;"></textarea>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="cancelImport">キャンセル</button>
+                <button class="btn btn-primary" id="submitImport">インポート</button>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="fileInput" accept=".json" style="display: none;">
+
+    <script>
+     // ===================
+    // データ管理
+    // ===================
+    const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/Kyue-Silver/sodor/main/sodor_map_data.json';
+    const FIXED_PASSWORD = '20130227';
+
+    let pins = [];
+    let isAdminMode = false;
+    let pendingPin = null;
+    let selectedColor = '#e94560';
+    let editingPinId = null;
+
+   //  GitHubから読み込み
+    async function loadPins() {
+        try {
+            const response = await fetch(GITHUB_RAW_URL);
+            if (response.ok) {
+                pins = await response.json();
+                console.log(`GitHubから${pins.length}個読み込み✓`);
+            } else {
+                console.log('GitHub JSON読み込み失敗');
+                pins = [];
+            }
+        } catch (e) {
+            console.error('GitHub読み込みエラー:', e);
+            pins = [];
+        }
+        renderPins();
+        updateStats();
+    }
+
+    //  GitHubに書き込み（ログアウト時）
+    async function savePinsToGitHub() {
+        if (!isAdminMode) return;
+        
+        try {
+            // GitHub APIでPUT（Personal Access Token必要）
+            const token = prompt('GitHub書き込み用Tokenを入力（キャンセルでlocalStorage保存）');
+            if (!token) {
+                localStorage.setItem('sodor_pins_backup', JSON.stringify(pins));
+                console.log('Tokenなし→localStorageバックアップ');
+                return;
+            }
+
+            const response = await fetch('https://api.github.com/repos/Kyue-Silver/sodor/contents/sodor_map_data.json', {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `Update sodor_map_data.json (${new Date().toISOString()})`,
+                    content: btoa(unescape(encodeURIComponent(JSON.stringify(pins, null, 2))))
+                })
+            });
+
+            if (response.ok) {
+                console.log('✅ GitHub保存完了！');
+                alert('GitHubに保存完了！');
+            } else {
+                throw new Error(await response.text());
+            }
+        } catch (e) {
+            console.error('GitHub保存失敗:', e);
+            localStorage.setItem('sodor_pins_backup', JSON.stringify(pins));
+            alert('GitHub保存失敗→localStorageにバックアップ');
+        }
+    }
+
+    function updateStats() {
+        document.getElementById('stats').textContent = `ピン数: ${pins.length} (GitHub: ${GITHUB_RAW_URL})`;
+    }
+
+        // ===================
+        // ピン描画
+        // ===================
+        function renderPins() {
+            const container = document.getElementById('pinsContainer');
+            container.innerHTML = '';
+
+            pins.forEach(pin => {
+                const pinEl = createPinElement(pin);
+                container.appendChild(pinEl);
+            });
+
+            renderPinList();
+        }
+
+        function createPinElement(pin) {
+            const div = document.createElement('div');
+            div.className = 'pin';
+            div.style.left = `${pin.x}%`;
+            div.style.top = `${pin.y}%`;
+            div.dataset.id = pin.id;
+
+            div.innerHTML = `
+                <svg viewBox="0 0 24 36" fill="${pin.color || '#e94560'}">
+                    <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0zm0 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+                </svg>
+                <div class="pin-tooltip">${pin.title}</div>
+            `;
+
+            div.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (isAdminMode) {
+                    editPin(pin);
+                } else {
+                    window.open(pin.url, '_blank');
+                }
+            });
+
+            return div;
+        }
+
+        // ピンリスト描画
+        function renderPinList() {
+            const listItems = document.getElementById('pinListItems');
+            listItems.innerHTML = '';
+
+            pins.forEach(pin => {
+                const item = document.createElement('div');
+                item.className = 'pin-item';
+                item.innerHTML = `
+                    <div class="pin-item-info">
+                        <div class="pin-item-title" style="color: ${pin.color || '#e94560'}">📍 ${pin.title}</div>
+                        <div class="pin-item-url">${pin.url}</div>
+                    </div>
+                    <div class="pin-item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editPin(${JSON.stringify(pin).replace(/"/g, '&quot;')})">編集</button>
+                        <button class="btn btn-danger btn-small" onclick="deletePin('${pin.id}')">削除</button>
+                    </div>
+                `;
+                listItems.appendChild(item);
+            });
+        }
+
+        // ===================
+        // 認証
+        // ===================
+        function checkPassword(input) {
+            const stored = localStorage.getItem(PASSWORD_KEY);
+            if (!stored) {
+                // 初回登録
+                localStorage.setItem(PASSWORD_KEY, input);
+                return true;
+            }
+            return stored === input;
+        }
+
+        // ===================
+        // イベントハンドラ
+        // ===================
+        document.getElementById('adminBtn').addEventListener('click', () => {
+            if (isAdminMode) {
+                exitAdminMode();
+            } else {
+                document.getElementById('loginModal').classList.add('active');
+                document.getElementById('passwordInput').focus();
+            }
+        });
+
+        document.getElementById('submitLogin').addEventListener('click', attemptLogin);
+        document.getElementById('passwordInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') attemptLogin();
+        });
+
+        function attemptLogin() {
+            const password = document.getElementById('passwordInput').value;
+            if (password && checkPassword(password)) {
+                enterAdminMode();
+                document.getElementById('loginModal').classList.remove('active');
+                document.getElementById('passwordInput').value = '';
+            } else {
+                alert('パスワードが違います');
+            }
+        }
+
+        document.getElementById('cancelLogin').addEventListener('click', () => {
+            document.getElementById('loginModal').classList.remove('active');
+            document.getElementById('passwordInput').value = '';
+        });
+
+        function enterAdminMode() {
+            isAdminMode = true;
+            document.getElementById('adminPanel').classList.add('active');
+            document.getElementById('mapWrapper').classList.add('admin-mode');
+            document.getElementById('adminBtn').textContent = '🔓 管理モード中';
+        }
+
+        function exitAdminMode() {
+            isAdminMode = false;
+            document.getElementById('adminPanel').classList.remove('active');
+            document.getElementById('mapWrapper').classList.remove('admin-mode');
+            document.getElementById('adminBtn').textContent = '🔐 管理者ログイン';
+            document.getElementById('pinList').style.display = 'none';
+        }
+
+        document.getElementById('logoutBtn').addEventListener('click', exitAdminMode);
+
+        // 地図クリック
+        document.getElementById('mapWrapper').addEventListener('click', (e) => {
+            if (!isAdminMode) return;
+            if (e.target.closest('.pin')) return;
+
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            pendingPin = { x, y };
+            editingPinId = null;
+            document.getElementById('pinTitle').value = '';
+            document.getElementById('pinUrl').value = '';
+            selectedColor = '#e94560';
+            updateColorSelection();
+            document.getElementById('pinModal').classList.add('active');
+            document.getElementById('pinTitle').focus();
+        });
+
+        // カラー選択
+        document.querySelectorAll('.color-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                selectedColor = opt.dataset.color;
+                updateColorSelection();
+            });
+        });
+
+        function updateColorSelection() {
+            document.querySelectorAll('.color-option').forEach(opt => {
+                opt.classList.toggle('selected', opt.dataset.color === selectedColor);
+            });
+        }
+
+        // ピン保存
+        document.getElementById('savePin').addEventListener('click', () => {
+            const title = document.getElementById('pinTitle').value.trim();
+            const url = document.getElementById('pinUrl').value.trim();
+
+            if (!title || !url) {
+                alert('タイトルとURLを入力してください');
+                return;
+            }
+
+            if (editingPinId) {
+                // 編集
+                const pin = pins.find(p => p.id === editingPinId);
+                if (pin) {
+                    pin.title = title;
+                    pin.url = url;
+                    pin.color = selectedColor;
+                }
+            } else {
+                // 新規追加
+                pins.push({
+                    id: Date.now().toString(),
+                    x: pendingPin.x,
+                    y: pendingPin.y,
+                    title,
+                    url,
+                    color: selectedColor
+                });
+            }
+
+            savePins();
+            renderPins();
+            document.getElementById('pinModal').classList.remove('active');
+            pendingPin = null;
+            editingPinId = null;
+        });
+
+        document.getElementById('cancelPin').addEventListener('click', () => {
+            document.getElementById('pinModal').classList.remove('active');
+            pendingPin = null;
+            editingPinId = null;
+        });
+
+        // ピン編集
+        window.editPin = function(pin) {
+            editingPinId = pin.id;
+            document.getElementById('pinTitle').value = pin.title;
+            document.getElementById('pinUrl').value = pin.url;
+            selectedColor = pin.color || '#e94560';
+            updateColorSelection();
+            document.getElementById('pinModal').classList.add('active');
+        };
+
+        // ピン削除
+        window.deletePin = function(id) {
+            if (confirm('このピンを削除しますか？')) {
+                pins = pins.filter(p => p.id !== id);
+                savePins();
+                renderPins();
+            }
+        };
+
+        // ピン一覧表示
+        document.getElementById('toggleListBtn').addEventListener('click', () => {
+            const list = document.getElementById('pinList');
+            list.style.display = list.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // エクスポート
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            const data = JSON.stringify(pins, null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `sodor_map_data_${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        // インポート
+        document.getElementById('importBtn').addEventListener('click', () => {
+            document.getElementById('importModal').classList.add('active');
+        });
+
+        document.getElementById('cancelImport').addEventListener('click', () => {
+            document.getElementById('importModal').classList.remove('active');
+            document.getElementById('importData').value = '';
+        });
+
+        document.getElementById('submitImport').addEventListener('click', () => {
+            try {
+                const data = JSON.parse(document.getElementById('importData').value);
+                if (Array.isArray(data)) {
+                    if (confirm(`${data.length}件のピンをインポートします。既存データに追加しますか？\n（キャンセルで上書き）`)) {
+                        pins = [...pins, ...data];
+                    } else {
+                        pins = data;
+                    }
+                    savePins();
+                    renderPins();
+                    document.getElementById('importModal').classList.remove('active');
+                    document.getElementById('importData').value = '';
+                    alert('インポート完了');
+                }
+            } catch (e) {
+                alert('JSONの形式が正しくありません');
+            }
+        });
+
+        // 初期化
+        loadPins();
+
+        // 画像読み込みエラー時の処理
+        document.getElementById('mapImage').addEventListener('error', function() {
+            this.style.background = 'linear-gradient(135deg, #2d5016 0%, #4a7c23 50%, #2d5016 100%)';
+            this.style.minHeight = '500px';
+            this.alt = '地図画像を sodor_map.png として同じフォルダに配置してください';
+        });
+    </script>
+</body>
+</html>
+①管理人ログイン画面のパスワードは「20130227」に固定
+②ピンの位置は「https://github.com/Kyue-Silver/sodor/blob/main/sodor_map_data.json」を読み込む。その他のピンは表示しない。
+③管理画面で編集したピンの情報は「https://github.com/Kyue-Silver/sodor/blob/main/sodor_map_data.json」を上書き。
+
+に編集。
+
+
+修正したHTMLコードです。主な変更点：
+
+パスワードを「20130227」に固定 - checkPassword関数を修正
+GitHubからのみピンを読み込み - localStorageからの読み込みを削除
+GitHub APIで直接保存 - ピン編集・追加・削除時に自動保存（要：GitHub Personal Access Token）
+html
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ソドー島マップ - 記事データベース</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #e94560;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #ff6b6b;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #533483;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #7952a3;
+        }
+        .map-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .map-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .map-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+        .pin {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -100%);
+            cursor: pointer;
+            transition: transform 0.2s;
+            z-index: 10;
+        }
+        .pin:hover {
+            transform: translate(-50%, -100%) scale(1.3);
+        }
+        .pin svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+        }
+        .pin-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            margin-bottom: 5px;
+        }
+        .pin:hover .pin-tooltip {
+            opacity: 1;
+        }
+        .map-wrapper.admin-mode {
+            cursor: crosshair;
+        }
+        .map-wrapper.admin-mode img {
+            border: 3px solid #e94560;
+        }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal {
+            background: #16213e;
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .modal h2 {
+            margin-bottom: 20px;
+            color: #e94560;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #aaa;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #0f3460;
+            border-radius: 8px;
+            background: #1a1a2e;
+            color: white;
+            font-size: 14px;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #e94560;
+        }
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 25px;
+        }
+        .admin-panel {
+            display: none;
+            background: #16213e;
+            padding: 15px 30px;
+            border-bottom: 1px solid #0f3460;
+        }
+        .admin-panel.active {
+            display: block;
+        }
+        .admin-panel p {
+            color: #e94560;
+            font-weight: bold;
+        }
+        .admin-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .pin-list {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .pin-list h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+        .pin-list-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .pin-item {
+            background: #16213e;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pin-item-info {
+            flex: 1;
+        }
+        .pin-item-title {
+            font-weight: bold;
+            color: #fff;
+        }
+        .pin-item-url {
+            font-size: 12px;
+            color: #888;
+            word-break: break-all;
+        }
+        .pin-item-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+        .btn-danger {
+            background: #c0392b;
+            color: white;
+        }
+        .btn-danger:hover {
+            background: #e74c3c;
+        }
+        .stats {
+            background: #0f3460;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .color-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: transform 0.2s;
+        }
+        .color-option:hover {
+            transform: scale(1.2);
+        }
+        .color-option.selected {
+            border-color: white;
+        }
+        .token-info {
+            background: #0f3460;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.2rem;
+            }
+            
+            .admin-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🚂 ソドー島マップ - 記事データベース</h1>
+        <div class="header-buttons">
+            <button class="btn btn-secondary" id="exportBtn">エクスポート</button>
+            <button class="btn btn-primary" id="adminBtn">🔐 管理者ログイン</button>
+        </div>
+    </header>
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-info">
+            <p>📍 管理モード: 地図をクリックしてピンを追加</p>
+            <div>
+                <button class="btn btn-secondary btn-small" id="toggleListBtn">ピン一覧表示</button>
+                <button class="btn btn-danger btn-small" id="logoutBtn">ログアウト</button>
+            </div>
+        </div>
+    </div>
+    <div class="map-container">
+        <div class="stats" id="stats">登録ピン数: 0</div>
+        <div class="map-wrapper" id="mapWrapper">
+            <img src="[lh3.googleusercontent.com](https://lh3.googleusercontent.com/d/1ZuFen9JHiu5dyNMLaWfQ8B1sHDrX2_f9)" alt="ソドー島マップ" id="mapImage">
+            <div id="pinsContainer"></div>
+        </div>
+    </div>
+    <div class="pin-list" id="pinList" style="display: none;">
+        <h3>📌 登録済みピン一覧</h3>
+        <div class="pin-list-items" id="pinListItems"></div>
+    </div>
+    <!-- ログインモーダル -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <h2>🔐 管理者ログイン</h2>
+            <div class="form-group">
+                <label>パスワード</label>
+                <input type="password" id="passwordInput" placeholder="パスワードを入力">
+            </div>
+            <div class="form-group">
+                <label>GitHub Personal Access Token（編集保存用）</label>
+                <input type="password" id="tokenInput" placeholder="ghp_xxxxxxxxxxxx">
+                <div class="token-info">
+                    ※ GitHubリポジトリへの書き込み権限(repo)が必要です<br>
+                    ※ Tokenがない場合は閲覧のみ可能です
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="cancelLogin">キャンセル</button>
+                <button class="btn btn-primary" id="submitLogin">ログイン</button>
+            </div>
+        </div>
+    </div>
+    <!-- ピン追加モーダル -->
+    <div class="modal-overlay" id="pinModal">
+        <div class="modal">
+            <h2>📍 ピンを追加</h2>
+            <div class="form-group">
+                <label>タイトル（場所名）</label>
+                <input type="text" id="pinTitle" placeholder="例: ティドマス機関庫">
+            </div>
+            <div class="form-group">
+                <label>リンクURL</label>
+                <input type="url" id="pinUrl" placeholder="[kyutaro8.blog.jp](https://kyutaro8.blog.jp/archives/xxx)">
+            </div>
+            <div class="form-group">
+                <label>ピンの色</label>
+                <div class="color-options" id="colorOptions">
+                    <div class="color-option selected" data-color="#e94560" style="background: #e94560;"></div>
+                    <div class="color-option" data-color="#3498db" style="background: #3498db;"></div>
+                    <div class="color-option" data-color="#2ecc71" style="background: #2ecc71;"></div>
+                    <div class="color-option" data-color="#f39c12" style="background: #f39c12;"></div>
+                    <div class="color-option" data-color="#9b59b6" style="background: #9b59b6;"></div>
+                    <div class="color-option" data-color="#1abc9c" style="background: #1abc9c;"></div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="cancelPin">キャンセル</button>
+                <button class="btn btn-primary" id="savePin">保存</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // ===================
+        // 定数
+        // ===================
+        const GITHUB_RAW_URL = '[raw.githubusercontent.com](https://raw.githubusercontent.com/Kyue-Silver/sodor/main/sodor_map_data.json)';
+        const GITHUB_API_URL = '[api.github.com](https://api.github.com/repos/Kyue-Silver/sodor/contents/sodor_map_data.json)';
+        const FIXED_PASSWORD = '20130227';
+        // ===================
+        // 状態管理
+        // ===================
+        let pins = [];
+        let isAdminMode = false;
+        let pendingPin = null;
+        let selectedColor = '#e94560';
+        let editingPinId = null;
+        let githubToken = null;
+        let fileSha = null;
+        // ===================
+        // GitHub操作
+        // ===================
+        async function loadPins() {
+            try {
+                // キャッシュを避けるためタイムスタンプを付加
+                const response = await fetch(GITHUB_RAW_URL + '?t=' + Date.now());
+                if (response.ok) {
+                    pins = await response.json();
+                    console.log(`GitHubから${pins.length}個のピンを読み込みました`);
+                } else {
+                    console.log('GitHub JSONの読み込みに失敗しました');
+                    pins = [];
+                }
+            } catch (e) {
+                console.error('GitHub読み込みエラー:', e);
+                pins = [];
+            }
+            renderPins();
+            updateStats();
+        }
+        async function getFileSha() {
+            if (!githubToken) return null;
+            try {
+                const response = await fetch(GITHUB_API_URL, {
+                    headers: {
+                        'Authorization': `token ${githubToken}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    return data.sha;
+                }
+            } catch (e) {
+                console.error('SHA取得エラー:', e);
+            }
+            return null;
+        }
+        async function savePinsToGitHub() {
+            if (!githubToken) {
+                alert('GitHub Tokenが設定されていないため保存できません');
+                return false;
+            }
+            try {
+                // 最新のSHAを取得
+                fileSha = await getFileSha();
+                
+                const content = btoa(unescape(encodeURIComponent(JSON.stringify(pins, null, 2))));
+                
+                const body = {
+                    message: `Update pins - ${new Date().toLocaleString('ja-JP')}`,
+                    content: content
+                };
+                
+                if (fileSha) {
+                    body.sha = fileSha;
+                }
+                const response = await fetch(GITHUB_API_URL, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${githubToken}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(body)
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    fileSha = data.content.sha;
+                    console.log('✅ GitHubへの保存完了');
+                    return true;
+                } else {
+                    const error = await response.json();
+                    console.error('GitHub保存エラー:', error);
+                    alert('GitHubへの保存に失敗しました: ' + (error.message || '不明なエラー'));
+                    return false;
+                }
+            } catch (e) {
+                console.error('GitHub保存エラー:', e);
+                alert('GitHubへの保存中にエラーが発生しました');
+                return false;
+            }
+        }
+        function updateStats() {
+            document.getElementById('stats').textContent = `登録ピン数: ${pins.length}`;
+        }
+        // ===================
+        // ピン描画
+        // ===================
+        function renderPins() {
+            const container = document.getElementById('pinsContainer');
+            container.innerHTML = '';
+            pins.forEach(pin => {
+                const pinEl = createPinElement(pin);
+                container.appendChild(pinEl);
+            });
+            renderPinList();
+            updateStats();
+        }
+        function createPinElement(pin) {
+            const div = document.createElement('div');
+            div.className = 'pin';
+            div.style.left = `${pin.x}%`;
+            div.style.top = `${pin.y}%`;
+            div.dataset.id = pin.id;
+            div.innerHTML = `
+                <svg viewBox="0 0 24 36" fill="${pin.color || '#e94560'}">
+                    <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0zm0 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+                </svg>
+                <div class="pin-tooltip">${pin.title}</div>
+            `;
+            div.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (isAdminMode) {
+                    editPin(pin);
+                } else {
+                    window.open(pin.url, '_blank');
+                }
+            });
+            return div;
+        }
+        function renderPinList() {
+            const listItems = document.getElementById('pinListItems');
+            listItems.innerHTML = '';
+            pins.forEach(pin => {
+                const item = document.createElement('div');
+                item.className = 'pin-item';
+                item.innerHTML = `
+                    <div class="pin-item-info">
+                        <div class="pin-item-title" style="color: ${pin.color || '#e94560'}">📍 ${pin.title}</div>
+                        <div class="pin-item-url">${pin.url}</div>
+                    </div>
+                    <div class="pin-item-actions">
+                        <button class="btn btn-secondary btn-small edit-btn" data-id="${pin.id}">編集</button>
+                        <button class="btn btn-danger btn-small delete-btn" data-id="${pin.id}">削除</button>
+                    </div>
+                `;
+                listItems.appendChild(item);
+            });
+            // イベントリスナーを設定
+            document.querySelectorAll('.edit-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const pin = pins.find(p => p.id === btn.dataset.id);
+                    if (pin) editPin(pin);
+                });
+            });
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', () => deletePin(btn.dataset.id));
+            });
+        }
+        // ===================
+        // 認証
+        // ===================
+        function checkPassword(input) {
+            return input === FIXED_PASSWORD;
+        }
+        // ===================
+        // イベントハンドラ
+        // ===================
+        document.getElementById('adminBtn').addEventListener('click', () => {
+            if (isAdminMode) {
+                exitAdminMode();
+            } else {
+                document.getElementById('loginModal').classList.add('active');
+                document.getElementById('passwordInput').focus();
+            }
+        });
+        document.getElementById('submitLogin').addEventListener('click', attemptLogin);
+        document.getElementById('passwordInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') attemptLogin();
+        });
+        function attemptLogin() {
+            const password = document.getElementById('passwordInput').value;
+            const token = document.getElementById('tokenInput').value.trim();
+            
+            if (checkPassword(password)) {
+                githubToken = token || null;
+                enterAdminMode();
+                document.getElementById('loginModal').classList.remove('active');
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('tokenInput').value = '';
+                
+                if (!githubToken) {
+                    alert('GitHub Tokenが入力されていないため、閲覧のみ可能です。\n編集を保存するにはTokenが必要です。');
+                }
+            } else {
+                alert('パスワードが違います');
+            }
+        }
+        document.getElementById('cancelLogin').addEventListener('click', () => {
+            document.getElementById('loginModal').classList.remove('active');
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('tokenInput').value = '';
+        });
+        function enterAdminMode() {
+            isAdminMode = true;
+            document.getElementById('adminPanel').classList.add('active');
+            document.getElementById('mapWrapper').classList.add('admin-mode');
+            document.getElementById('adminBtn').textContent = '🔓 管理モード中';
+        }
+        function exitAdminMode() {
+            isAdminMode = false;
+            githubToken = null;
+            document.getElementById('adminPanel').classList.remove('active');
+            document.getElementById('mapWrapper').classList.remove('admin-mode');
+            document.getElementById('adminBtn').textContent = '🔐 管理者ログイン';
+            document.getElementById('pinList').style.display = 'none';
+        }
+        document.getElementById('logoutBtn').addEventListener('click', exitAdminMode);
+        // 地図クリック
+        document.getElementById('mapWrapper').addEventListener('click', (e) => {
+            if (!isAdminMode) return;
+            if (e.target.closest('.pin')) return;
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            pendingPin = { x, y };
+            editingPinId = null;
+            document.getElementById('pinTitle').value = '';
+            document.getElementById('pinUrl').value = '';
+            selectedColor = '#e94560';
+            updateColorSelection();
+            document.getElementById('pinModal').classList.add('active');
+            document.getElementById('pinTitle').focus();
+        });
+        // カラー選択
+        document.querySelectorAll('.color-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                selectedColor = opt.dataset.color;
+                updateColorSelection();
+            });
+        });
+        function updateColorSelection() {
+            document.querySelectorAll('.color-option').forEach(opt => {
+                opt.classList.toggle('selected', opt.dataset.color === selectedColor);
+            });
+        }
+        // ピン保存
+        document.getElementById('savePin').addEventListener('click', async () => {
+            const title = document.getElementById('pinTitle').value.trim();
+            const url = document.getElementById('pinUrl').value.trim();
+            if (!title || !url) {
+                alert('タイトルとURLを入力してください');
+                return;
+            }
+            if (editingPinId) {
+                // 編集
+                const pin = pins.find(p => p.id === editingPinId);
+                if (pin) {
+                    pin.title = title;
+                    pin.url = url;
+                    pin.color = selectedColor;
+                }
+            } else {
+                // 新規追加
+                pins.push({
+                    id: Date.now().toString(),
+                    x: pendingPin.x,
+                    y: pendingPin.y,
+                    title,
+                    url,
+                    color: selectedColor
+                });
+            }
+            // GitHubに保存
+            const saved = await savePinsToGitHub();
+            if (saved) {
+                renderPins();
+                document.getElementById('pinModal').classList.remove('active');
+            } else {
+                // 保存失敗時はローカルの変更を元に戻す
+                await loadPins();
+            }
+            
+            pendingPin = null;
+            editingPinId = null;
+        });
+        document.getElementById('cancelPin').addEventListener('click', () => {
+            document.getElementById('pinModal').classList.remove('active');
+            pendingPin = null;
+            editingPinId = null;
+        });
+        // ピン編集
+        function editPin(pin) {
+            editingPinId = pin.id;
+            document.getElementById('pinTitle').value = pin.title;
+            document.getElementById('pinUrl').value = pin.url;
+            selectedColor = pin.color || '#e94560';
+            updateColorSelection();
+            document.getElementById('pinModal').classList.add('active');
+        }
+        // ピン削除
+        async function deletePin(id) {
+            if (confirm('このピンを削除しますか？')) {
+                const originalPins = [...pins];
+                pins = pins.filter(p => p.id !== id);
+                
+                const saved = await savePinsToGitHub();
+                if (saved) {
+                    renderPins();
+                } else {
+                    pins = originalPins;
+                }
+            }
+        }
+        // ピン一覧表示
+        document.getElementById('toggleListBtn').addEventListener('click', () => {
+            const list = document.getElementById('pinList');
+            list.style.display = list.style.display === 'none' ? 'block' : 'none';
+        });
+        // エクスポート
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            const data = JSON.stringify(pins, null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `sodor_map_data_${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+        // 初期化
+        loadPins();
+        // 画像読み込みエラー時の処理
+        document.getElementById('mapImage').addEventListener('error', function() {
+            this.style.background = 'linear-gradient(135deg, #2d5016 0%, #4a7c23 50%, #2d5016 100%)';
+            this.style.minHeight = '500px';
+            this.alt = '地図画像を読み込めませんでした';
+        });
+    </script>
+</body>
+</html>
+主な変更点の説明
+項目	変更内容
+パスワード固定	checkPassword()がFIXED_PASSWORD = '20130227'と比較するだけに変更
+ピン読み込み	GitHubのraw.githubusercontent.comからのみ読み込み。localStorageは使用しない
+ピン保存	編集・追加・削除時にGitHub APIで直接sodor_map_data.jsonを上書き
+Token入力	ログイン時にGitHub Personal Access Tokenを入力する欄を追加。Tokenがなければ閲覧専用
+インポート機能削除	GitHubが唯一のデータソースになったため、手動インポートは不要として削除
+使用方法
+GitHubで Personal Access Token を作成（repo権限が必要）
+管理者ログイン時にパスワード20130227とTokenを入力
+地図をクリックしてピンを追加 → 保存時に自動でGitHubへPush
+
+
+
+
+lh3.googleusercontent.com
+kyutaro8.blog.jp
+raw.githubusercontent.com
+api.github.com
+4 ソース
+メッセージを入力...
+
+管理人ログイン情報 | Use AI
