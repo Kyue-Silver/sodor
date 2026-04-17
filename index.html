@@ -439,50 +439,64 @@
     <input type="file" id="fileInput" accept=".json" style="display: none;">
 
     <script>
-        // ===================
-        // データ管理
-        // ===================
-        const STORAGE_KEY = 'sodor_map_pins';
-        const PASSWORD_KEY = 'sodor_map_password';
+     // ===================
+    // データ管理
+    // ===================
+    const STORAGE_KEY = 'sodor_map_pins';
+    const PASSWORD_KEY = 'sodor_map_password';
+    const FIXED_PASSWORD = '20130227'; // ②固定パスワード
 
-        let pins = [];
-        let isAdminMode = false;
-        let pendingPin = null;
-        let selectedColor = '#e94560';
-        let editingPinId = null;
+    let pins = [];
+    let isAdminMode = false;
+    let pendingPin = null;
+    let selectedColor = '#e94560';
+    let editingPinId = null;
 
-        // データ読み込み
-        async function loadPins() {
-            try {
-                // まず外部JSONを試行
-                const response = await fetch('sodor_map_data.json');
-                if (response.ok) {
-                    const data = await response.json();
-                    pins = data;
-                    savePins(); // localStorageにも同期
-                } else {
-                    // 外部JSONがない場合はlocalStorageから
-                    const stored = localStorage.getItem(STORAGE_KEY);
-                    pins = stored ? JSON.parse(stored) : [];
-                }
-            } catch (e) {
-                console.error('データ読み込み失敗', e);
-                const stored = localStorage.getItem(STORAGE_KEY);
-                pins = stored ? JSON.parse(stored) : [];
+    // JSON優先読み込み（localStorage完全無視）
+    async function loadPins() {
+        try {
+            const response = await fetch('sodor_map_data.json');
+            if (response.ok) {
+                pins = await response.json();
+                console.log(`JSONから${pins.length}個のピンを読み込み`);
+            } else {
+                console.log('sodor_map_data.jsonが見つかりません');
+                pins = [];
             }
-            renderPins();
-            updateStats();
+        } catch (e) {
+            console.error('JSON読み込み失敗:', e);
+            pins = [];
         }
-        // データ保存
-        function savePins() {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(pins));
-            updateStats();
-        }
+        renderPins();
+        updateStats();
+    }
 
-        // 統計更新
-        function updateStats() {
-            document.getElementById('stats').textContent = `登録ピン数: ${pins.length}`;
+    // JSONファイル書き換え保存
+    async function savePinsToJson() {
+        try {
+            const response = await fetch('sodor_map_data.json', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(pins, null, 2)
+            });
+            if (response.ok) {
+                console.log('JSONファイルに保存完了');
+            } else {
+                // サーバー非対応時はlocalStorageフォールバック
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(pins));
+                console.log('JSON書き込み不可→localStorageに保存');
+            }
+        } catch (e) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(pins));
+            console.log('JSON書き込み失敗→localStorageに保存');
         }
+        updateStats();
+    }
+
+    // 統計更新
+    function updateStats() {
+        document.getElementById('stats').textContent = `登録ピン数: ${pins.length}`;
+    }
 
         // ===================
         // ピン描画
