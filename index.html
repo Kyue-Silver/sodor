@@ -455,7 +455,7 @@
         async function loadPins() {
             try {
                 const response = await fetch(
-                     'https://github.com/Kyue-Silver/sodor/blob/main/sodor_map_data.json'
+                     'https://raw.githubusercontent.com/Kyue-Silver/sodor/main/sodor_map_data.json'
                  );
                  const data = await response.json();
                 pins = data;
